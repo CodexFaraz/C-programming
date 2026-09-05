@@ -1,3 +1,4 @@
+//hello world program
 #include <stdio.h>
 
 int main() 
@@ -6,4 +7,67 @@ int main()
 
     return 0;
 }
+
+// student detail program
+#include <stdio.h>
+
+int main() {
+    char name[50];
+    int age;
+    float marks;
+
+    printf("Enter student name: ");
+    scanf("%50s", name);
+
+    printf("Enter age: ");
+    scanf("%d", &age);
+
+    printf("Enter marks: ");
+    scanf("%f", &marks);
+
+    printf("\n--- Student Details ---\n");
+    printf("Name: %s\n", name);
+    printf("Age: %d\n", age);
+    printf("Marks: %.2f\n", marks);
+
+    return 0;
+}
+
+//Addition of two number
+
+#include <stdio.h>
+
+int main() {
+    int a, b;
+
+    printf("Enter two numbers: ");
+    scanf("%d %d", &a, &b);
+
+    printf("Addition = %d", a + b);
+
+    return 0;
+}
+
+
+// multiplication
+
+#include <stdio.h>
+
+int main()
+{
+    int a, b, result;
+
+    printf("Enter two numbers: ");
+    scanf("%d %d", &a, &b);
+
+    result = a * b;
+
+    printf("Multiplication = %d", result);
+
+    return 0;
+}
+
+
+
+
 
