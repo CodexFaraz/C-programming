@@ -68,6 +68,64 @@ int main()
 }
 
 
+// Program to Calculate the Area of a Circle 
+
+#include <stdio.h>
+
+int main()
+{
+    float radius, area;
+    const float PI = 3.14159;
+
+    printf("Enter radius of circle: ");
+    scanf("%f", &radius);
+
+    area = PI * radius * radius;
+
+    printf("Area of circle = %.2f\n", area);
+
+    return 0;
+}
+
+
+// Program to Calculate the Average of Three Numbers 
+
+#include <stdio.h>
+
+int main()
+{
+    float a, b, c, average;
+
+    printf("Enter three numbers: ");
+    scanf("%f %f %f", &a, &b, &c);
+
+    average = (a + b + c) / 3;
+
+    printf("Average = %.2f\n", average);
+
+    return 0;
+}
+
+
+// Program to Demonstrate Single-Line and Multi-Line Comments 
+
+
+#include <stdio.h>
+
+int main()
+{
+    // This is a single-line comment.
+    printf("Hello, World!\n");
+
+    /*
+       This is a multi-line comment.
+       It can contain multiple lines.
+    */
+    printf("This program demonstrates comments in C.\n");
+
+    return 0;
+}
+
 
 
 
