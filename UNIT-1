@@ -1,75 +1,38 @@
-//hello world program
-#include <stdio.h>
+\\1. Write a program to make use of basic I/O functions using different data types.
 
-int main() 
-{
-    printf("Hello, World!\n");
-
-    return 0;
-}
-
-// student detail program
-#include <stdio.h>
-
-int main() {
-    char name[50];
-    int age;
-    float marks;
-
-    printf("Enter student name: ");
-    scanf("%50s", name);
-
-    printf("Enter age: ");
-    scanf("%d", &age);
-
-    printf("Enter marks: ");
-    scanf("%f", &marks);
-
-    printf("\n--- Student Details ---\n");
-    printf("Name: %s\n", name);
-    printf("Age: %d\n", age);
-    printf("Marks: %.2f\n", marks);
-
-    return 0;
-}
-
-//Addition of two number
-
-#include <stdio.h>
-
-int main() {
-    int a, b;
-
-    printf("Enter two numbers: ");
-    scanf("%d %d", &a, &b);
-
-    printf("Addition = %d", a + b);
-
-    return 0;
-}
-
-
-// multiplication
 
 #include <stdio.h>
 
 int main()
 {
-    int a, b, result;
+    int age;
+    float percentage;
+    double salary;
+    char grade;
 
-    printf("Enter two numbers: ");
-    scanf("%d %d", &a, &b);
+    printf("Enter age: ");
+    scanf("%d", &age);
 
-    result = a * b;
+    printf("Enter percentage: ");
+    scanf("%f", &percentage);
 
-    printf("Multiplication = %d", result);
+    printf("Enter salary: ");
+    scanf("%lf", &salary);
+
+    printf("Enter grade: ");
+    scanf(" %c", &grade);
+
+    printf("\n--- Details ---\n");
+    printf("Age = %d\n", age);
+    printf("Percentage = %.2f\n", percentage);
+    printf("Salary = %.2lf\n", salary);
+    printf("Grade = %c\n", grade);
 
     return 0;
 }
 
 
-// Program to Calculate the Area of a Circle 
-
+\\2. Write a program to calculate the area of a circle.
 #include <stdio.h>
 
 int main()
@@ -77,7 +40,7 @@ int main()
     float radius, area;
     const float PI = 3.14159;
 
-    printf("Enter radius of circle: ");
+    printf("Enter radius: ");
     scanf("%f", &radius);
 
     area = PI * radius * radius;
@@ -87,9 +50,7 @@ int main()
     return 0;
 }
 
-
-// Program to Calculate the Average of Three Numbers 
-
+\\3. Write a program to calculate the average of three numbers.
 #include <stdio.h>
 
 int main()
@@ -107,25 +68,4 @@ int main()
 }
 
 
-// Program to Demonstrate Single-Line and Multi-Line Comments 
-
-
-#include <stdio.h>
-
-int main()
-{
-    // This is a single-line comment.
-    printf("Hello, World!\n");
-
-    /*
-       This is a multi-line comment.
-       It can contain multiple lines.
-    */
-    printf("This program demonstrates comments in C.\n");
-
-    return 0;
-}
-
-
-
-
+\\4. Write a C program to swap two numbers using a temporary variable.
