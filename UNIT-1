@@ -89,7 +89,7 @@ int main() {
     return 0;
 }
 
-5.// single line and multiline comment.
+//.5 single line and multiline comment.
 
 
 #include <stdio.h>
