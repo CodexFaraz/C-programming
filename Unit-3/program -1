@@ -1,0 +1,42 @@
+#include <stdio.h>
+
+int main()
+{
+    int i, n;
+
+    printf("Enter number of elements: ");
+    scanf("%d", &n);
+
+    int intArray[n];
+    float floatArray[n];
+    char charArray[n];
+
+    printf("\nEnter integer array elements:\n");
+    for(i = 0; i < n; i++)
+        scanf("%d", &intArray[i]);
+
+    printf("\nEnter float array elements:\n");
+    for(i = 0; i < n; i++)
+        scanf("%f", &floatArray[i]);
+
+    printf("\nEnter character array elements:\n");
+    for(i = 0; i < n; i++)
+        scanf(" %c", &charArray[i]);
+
+    printf("\nInteger Array:\n");
+    for(i = 0; i < n; i++)
+        printf("Value = %d, Address = %p\n",
+               intArray[i], (void*)&intArray[i]);
+
+    printf("\nFloat Array:\n");
+    for(i = 0; i < n; i++)
+        printf("Value = %.2f, Address = %p\n",
+               floatArray[i], (void*)&floatArray[i]);
+
+    printf("\nCharacter Array:\n");
+    for(i = 0; i < n; i++)
+        printf("Value = %c, Address = %p\n",
+               charArray[i], (void*)&charArray[i]);
+
+    return 0;
+}
