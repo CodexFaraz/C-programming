@@ -1,0 +1,54 @@
+
+#include <stdio.h>
+
+int main()
+{
+    FILE *fp;
+    int roll;
+    char name[50];
+    float marks;
+
+    fp = fopen("student.txt", "w");
+
+    if(fp == NULL)
+    {
+        printf("File cannot be created.");
+        return 1;
+    }
+
+    printf("Enter Roll Number: ");
+    scanf("%d", &roll);
+
+    printf("Enter Name: ");
+    scanf(" %49[^\n]", name);
+
+    printf("Enter Marks: ");
+    scanf("%f", &marks);
+
+    fprintf(fp, "Roll Number: %d\n", roll);
+    fprintf(fp, "Name: %s\n", name);
+    fprintf(fp, "Marks: %.2f\n", marks);
+
+    fclose(fp);
+
+    fp = fopen("student.txt", "r");
+
+    if(fp == NULL)
+    {
+        printf("File cannot be opened.");
+        return 1;
+    }
+
+    printf("\nStudent Details from File:\n");
+
+    char ch;
+
+    while((ch = fgetc(fp)) != EOF)
+    {
+        putchar(ch);
+    }
+
+    fclose(fp);
+
+    return 0;
+}
