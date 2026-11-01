@@ -1,0 +1,38 @@
+
+#include <stdio.h>
+
+int main()
+{
+    FILE *fp;
+    char filename[100];
+    int ch, lines = 0;
+    int last = '\n';
+
+    printf("Enter file name: ");
+    scanf("%99s", filename);
+
+    fp = fopen(filename, "r");
+
+    if(fp == NULL)
+    {
+        printf("File not found.");
+        return 1;
+    }
+
+    while((ch = fgetc(fp)) != EOF)
+    {
+        if(ch == '\n')
+            lines++;
+
+        last = ch;
+    }
+
+    if(last != '\n' && last != EOF)
+        lines++;
+
+    printf("Total number of lines = %d", lines);
+
+    fclose(fp);
+
+    return 0;
+}
