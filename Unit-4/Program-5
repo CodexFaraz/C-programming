@@ -1,0 +1,43 @@
+
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+    char str1[100], str2[100], copy[100];
+    int result, i, length;
+
+    printf("Enter first string: ");
+    scanf(" %99[^\n]", str1);
+
+    printf("Enter second string: ");
+    scanf(" %99[^\n]", str2);
+
+    // Copy string
+    strcpy(copy, str1);
+    printf("\nCopied string = %s", copy);
+
+    // Length of string
+    length = strlen(str1);
+    printf("\nLength of first string = %d", length);
+
+    // Compare strings
+    result = strcmp(str1, str2);
+
+    if(result == 0)
+        printf("\nBoth strings are equal");
+    else
+        printf("\nBoth strings are not equal");
+
+    // Concatenate strings
+    strcat(str1, str2);
+    printf("\nConcatenated string = %s", str1);
+
+    // Reverse string manually
+    printf("\nReversed second string = ");
+
+    for(i = (int)strlen(str2) - 1; i >= 0; i--)
+        printf("%c", str2[i]);
+
+    return 0;
+}
