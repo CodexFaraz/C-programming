@@ -1,0 +1,23 @@
+
+#include <stdio.h>
+
+float area()
+{
+    float b, h;
+
+    printf("Enter base and height: ");
+    scanf("%f %f", &b, &h);
+
+    return 0.5 * b * h;
+}
+
+int main()
+{
+    float a;
+
+    a = area();
+
+    printf("Area = %.2f", a);
+
+    return 0;
+}
