@@ -1,0 +1,23 @@
+
+#include <stdio.h>
+
+int main()
+{
+    int a = 10;
+    int *p;
+    int **q;
+
+    p = &a;
+    q = &p;
+
+    printf("Value of variable = %d\n", a);
+    printf("Value using pointer = %d\n", *p);
+    printf("Value using double pointer = %d\n", **q);
+
+    printf("\nAddress of variable = %p\n", (void *)&a);
+    printf("Address stored in pointer = %p\n", (void *)p);
+    printf("Address of pointer = %p\n", (void *)&p);
+    printf("Address stored in double pointer = %p\n", (void *)q);
+
+    return 0;
+}
